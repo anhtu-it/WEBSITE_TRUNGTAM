@@ -1,0 +1,969 @@
+/* =========================================================
+   WEBSITE TRUNG TÂM ĐÀO TẠO & SÁT HẠCH LÁI XE
+========================================================= */
+
+:root {
+    --primary: #073b82;
+    --primary-dark: #052d63;
+    --primary-light: #eef5ff;
+    --blue: #1671df;
+    --text: #17233a;
+    --text-light: #667085;
+    --white: #ffffff;
+    --background: #f7f9fc;
+    --border: #e5eaf1;
+    --shadow: 0 3px 12px rgba(20, 50, 90, 0.08);
+    --shadow-hover: 0 8px 22px rgba(20, 50, 90, 0.13);
+    --radius: 11px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 89.3%;
+    max-width: 1375px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.top-header {
+    height: 101px;
+    background: #ffffff;
+}
+
+.header-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-box {
+    width: 78px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0c4389;
+    border-radius: 50%;
+    background: #ffffff;
+    font-size: 34px;
+    flex-shrink: 0;
+}
+
+.logo-text h1 {
+    color: #123f7d;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.logo-text p {
+    margin-top: 4px;
+    color: #4f5e73;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #25344c;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.facebook {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2864b4;
+    color: white;
+    border-radius: 50%;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar {
+    height: 52px;
+    background: #063979;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.nav-menu {
+    height: 52px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    list-style: none;
+}
+
+    .nav-menu li {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+    }
+
+        .nav-menu li a {
+            min-width: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 0 16px;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: 0.2s ease;
+        }
+
+        .nav-menu li:hover,
+        .nav-menu li.active {
+            background: #1253a0;
+        }
+
+            /* thanh xanh sáng phía dưới menu active */
+
+            .nav-menu li.active::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 4px;
+                background: #1696f5;
+            }
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    padding: 24px 0 20px;
+    background: #ffffff;
+}
+
+.hero-container {
+    position: relative;
+    min-height: 327px;
+    display: grid;
+    grid-template-columns: 48% 52%;
+    overflow: hidden;
+    border-radius: 11px;
+    background: #edf5ff;
+}
+
+
+/* ---------- LEFT HERO ---------- */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 38px 40px 30px 55px;
+    background: linear-gradient( 90deg, #eef6ff 0%, #edf5ff 75%, rgba(237, 245, 255, 0.65) 100% );
+}
+
+    .hero-content h2 {
+        color: #123f7d;
+        font-size: 31px;
+        font-weight: 800;
+        line-height: 1.35;
+        margin-bottom: 13px;
+    }
+
+    .hero-content > p {
+        max-width: 330px;
+        color: #29384f;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 18px;
+    }
+
+
+/* =========================================================
+   SEARCH CARD
+========================================================= */
+
+.search-card {
+    position: absolute;
+    z-index: 10;
+    top: 85px;
+    left: 435px;
+    width: 505px;
+    padding: 17px;
+    background: rgba(255, 255, 255, 0.92); /* đổi từ 0.97 → 0.92, trong hơn chút */
+    backdrop-filter: blur(10px); /* thêm dòng này — làm mờ phần ảnh thấy qua khung */
+    border-radius: 11px;
+    box-shadow: 0 8px 25px rgba(25, 55, 90, 0.14);
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+
+/* ---------- INPUT ---------- */
+
+.search-input {
+    height: 57px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d3dbe7;
+    border-radius: 8px;
+    background: white;
+}
+
+    .search-input input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 0 13px;
+        color: #26364f;
+        font-size: 15px;
+    }
+
+        .search-input input::placeholder {
+            color: #68768b;
+        }
+
+    .search-input span {
+        padding: 0 16px;
+        color: #1b3152;
+        font-size: 21px;
+    }
+
+
+/* ---------- EXAMPLE ---------- */
+
+.search-example {
+    margin: 7px 0 14px;
+    color: #68768b;
+    font-size: 12px;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.search-button {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 7px;
+    background: #063d85;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+    .search-button:hover {
+        background: #0a55ad;
+    }
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+.hero-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(237,245,255,0.5) 0%, rgba(237,245,255,0) 15%);
+    z-index: 1;
+}
+
+.hero-image {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0));
+}
+/* ---------- XE PLACEHOLDER ---------- */
+
+.road {
+    position: absolute;
+    z-index: 4;
+    right: 105px;
+    bottom: 45px;
+    font-size: 105px;
+}
+
+.hero-decoration {
+    position: absolute;
+    z-index: 5;
+    right: 55px;
+    bottom: 35px;
+    font-size: 55px;
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   QUICK SERVICES
+========================================================= */
+
+.quick-services {
+    padding: 0 0 22px;
+    background: #ffffff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 21px;
+}
+
+.service-card {
+    min-height: 132px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 18px 20px;
+    background: white;
+    border: 1px solid #edf0f4;
+    border-radius: 11px;
+    box-shadow: var(--shadow);
+    transition: 0.2s ease;
+}
+
+    .service-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+    }
+
+
+/* ---------- ICON ---------- */
+
+.service-icon {
+    width: 82px;
+    height: 82px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-size: 36px;
+}
+
+.blue {
+    background: #287be2;
+}
+
+.orange {
+    background: #ff981d;
+}
+
+.green {
+    background: #50bc79;
+}
+
+
+/* ---------- CONTENT ---------- */
+
+.service-content {
+    flex: 1;
+}
+
+    .service-content h3 {
+        margin-bottom: 5px;
+        font-size: 17px;
+        font-weight: 800;
+    }
+
+.service-card:nth-child(1) .service-content h3 {
+    color: #1671df;
+}
+
+.service-card:nth-child(2) .service-content h3 {
+    color: #ff8514;
+}
+
+.service-card:nth-child(3) .service-content h3 {
+    color: #40a968;
+}
+
+.service-content p {
+    color: #253249;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.arrow {
+    color: #233954;
+    font-size: 31px;
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.information-section {
+    padding: 0 0 21px;
+    background: #ffffff;
+}
+
+.information-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.info-box {
+    min-height: 247px;
+    padding: 18px 20px;
+    background: white;
+    border: 1px solid #edf0f4;
+    border-radius: 11px;
+    box-shadow: var(--shadow);
+}
+
+
+/* ---------- BOX HEADER ---------- */
+
+.box-header {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8edf3;
+    margin-bottom: 3px;
+}
+
+    .box-header h2 {
+        color: #1761ba;
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    .box-header a {
+        color: #0965c8;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+.notification-item {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #edf0f4;
+}
+
+    .notification-item:last-child {
+        border-bottom: none;
+    }
+
+.notification-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    color: #26364e;
+    font-size: 13px;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    background: #1674dc;
+    border-radius: 50%;
+}
+
+.badge-new {
+    flex-shrink: 0;
+    padding: 3px 6px;
+    background: #f16d72;
+    color: white;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.date {
+    flex-shrink: 0;
+    color: #66748a;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   EXAM CARD
+========================================================= */
+
+.exam-card {
+    height: 181px;
+    display: flex;
+    gap: 13px;
+    padding-top: 7px;
+}
+
+
+/* ---------- DATE ---------- */
+
+.exam-date {
+    width: 105px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f1f6fc;
+    border-radius: 8px;
+    color: #213b61;
+    text-align: center;
+}
+
+    .exam-date span {
+        font-size: 11px;
+        font-weight: 700;
+    }
+
+    .exam-date strong {
+        color: #0a4088;
+        font-size: 46px;
+        font-weight: 800;
+        line-height: 1.05;
+    }
+
+    .exam-date small {
+        margin-top: 3px;
+        font-size: 11px;
+    }
+
+
+/* ---------- EXAM INFO ---------- */
+
+.exam-info {
+    flex: 1;
+    padding: 12px 18px;
+    border: 1px solid #e2e7ee;
+    border-radius: 8px;
+    min-width: 0;
+}
+
+.exam-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 9px;
+}
+
+    .exam-title strong {
+        color: #183b71;
+        font-size: 13px;
+    }
+
+.tag-a1,
+.tag-a {
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.tag-a1 {
+    background: #0873dd;
+}
+
+.tag-a {
+    background: #4eb978;
+}
+
+.exam-info p {
+    margin: 6px 0;
+    color: #58677c;
+    font-size: 12px;
+}
+
+.detail-button {
+    margin-top: 4px;
+    padding: 7px 18px;
+    border: 1px solid #1265ce;
+    border-radius: 5px;
+    background: white;
+    color: #1265ce;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+    .detail-button:hover {
+        background: #1265ce;
+        color: white;
+    }
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    min-height: 77px;
+    display: flex;
+    align-items: center;
+    background: #063879;
+    color: white;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+.footer-item {
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-right: 1px solid rgba(255,255,255,0.45);
+}
+
+    .footer-item:last-child {
+        border-right: none;
+    }
+
+    .footer-item > div:first-child {
+        font-size: 25px;
+    }
+
+    .footer-item strong {
+        display: block;
+        margin-bottom: 2px;
+        font-size: 13px;
+    }
+
+    .footer-item span {
+        display: block;
+        color: #dce8f8;
+        font-size: 10px;
+    }
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .logo-text h1 {
+        font-size: 20px;
+    }
+
+    .header-contact {
+        gap: 12px;
+    }
+
+    .contact-item {
+        font-size: 11px;
+    }
+
+    .nav-menu li a {
+        min-width: auto;
+        padding: 0 10px;
+        font-size: 11px;
+    }
+
+    .hero-content {
+        padding-left: 30px;
+    }
+
+        .hero-content h2 {
+            font-size: 27px;
+        }
+
+    .search-card {
+        left: 48%;
+        width: 45%;
+    }
+
+    .service-card {
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .service-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 30px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .top-header {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-text h1 {
+        font-size: 17px;
+        white-space: normal;
+    }
+
+    .logo-text p {
+        font-size: 12px;
+    }
+
+    .header-contact {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    /* NAV */
+
+    .navbar {
+        height: auto;
+    }
+
+    .nav-menu {
+        height: auto;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+        .nav-menu li a {
+            min-height: 50px;
+            white-space: nowrap;
+            padding: 0 14px;
+        }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 15px 0;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .hero-content {
+        min-height: 390px;
+        padding: 30px 25px;
+    }
+
+        .hero-content h2 {
+            font-size: 27px;
+        }
+
+    .search-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .hero-image {
+        min-height: 220px;
+    }
+
+
+    /* SERVICES */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+
+    /* INFORMATION */
+
+    .information-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .footer-item {
+        border-right: none;
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .logo-box {
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+    }
+
+    .header-contact {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        min-height: 370px;
+        padding: 25px 20px;
+    }
+
+        .hero-content h2 {
+            font-size: 24px;
+        }
+
+    .search-card {
+        padding: 14px;
+    }
+
+    .notification-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .exam-card {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .exam-date {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .exam-info {
+        padding: 14px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

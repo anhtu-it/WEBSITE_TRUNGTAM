@@ -1,0 +1,1 @@
+console.log("Website Trung tâm đã khởi động!");
